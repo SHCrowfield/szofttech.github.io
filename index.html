@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ic.png">
+    <title>Course: Software Engeneering</title>
+</head>
+<body>
+    1, Mik az objektum-orientált tervezés elemei? Mivel foglalkozik az OOA, OOT és az OOP?
+Objektum-orientált Analízis (OOA), Tervezés (OOT) és Programozás (OOP).
+OOA: a felhasználói környezet modelljének kidolgozásával foglalkozik.
+OOT: a követelményeket kielégítő rendszer modelljének kidolgozásával foglalkozik.
+OOP: az OOT realizálásával foglalkozik egy OO nyelv (pl. Java, C++) segítségével.
+2, Mik az OOT jellemzői, előnyei?
+Az OOT jellemzői:
+Az objektumok a való világ entitásainak reprezentációi, amelyek önmagukat menedzselik.
+Az objektumok önállóak és saját, a külvilág számára közvetlenül nem látható állapottal rendelkeznek.
+A rendszer funkcionalitását objektumok szolgáltatásaiként reprezentáljuk.
+Közös adatterületek nem léteznek. Az objektumok üzenetekkel kommunikálnak.
+Az objektumok lehetnek elosztottak, végrehajtásuk lehet szekvenciális vagy párhuzamos.
+Az OOT előnyei:
+Könnyű kezelhetőség. Az objektumok önálló entitásokként foghatók fel.
+Az objektumok potenciálisan újrafelhasználható komponensek.
+Sok rendszerben a való világ entitásai könnyen és értelemszerűen képezhetők le a rendszer objektumaira.
+3. Mik az objektumok és az objektum-osztályok? UML jelölések.
+Objektumok: a szoftver rendszer entitásai, amelyek a való világ és a rendszer entitásait reprezentálják.
+Objektum-osztályok: objektumok sablonjai. Belőlük objektumok hozhatók létre. Az objektum-osztályok
+más objektum-osztályoktól attribútumokat és szolgáltatásokat örökölhetnek.
+UML-jelölés:
+• Az objektum-osztályokat téglalapok jelképezik, amelyben a név felül, a tulajdonságok középen, az
+operációk pedig az alsó részben helyezkednek el.
+4. Ismertesse az objektumok kommunikációjának elvi és gyakorlati lehetőségeit. Az üzenetek
+implementálásának lehetőségei.
+Elvileg: az objektumok üzeneteken keresztül kommunikálnak.
+Üzenetek:
+A hívó objektum által kért szolgáltatás neve.
+A szolgáltatás végrehajtásához szükséges információ másolata, valamint az eredménytárolójának neve.
+Gyakorlatban: az üzenteket gyakran eljárás-hívással implementáljuk:
+Név = eljárás neve.
+Információ = paraméter-lista.
+5. Mi az általánosítás és az öröklés kapcsolata? UML jelölés. Az öröklés szabályai, előnyei és problémái.
+Az objektumok azon osztályok tagjai, amelyek az attribútumait és az operációt definiálják. Az osztályok
+egy osztály-hierarchiába szervezhetők, ahol egy osztály (szuper-osztály) egy vagy több osztály (alosztály)
+általánosítása lehet.
+Az al-osztály örökli a szuper-osztály attribútumait és operációit, valamint saját metódusokat és
+attribútumokat adhat ezekhez.
+Az UML-beli általánosítást az OO nyelvek öröklésként implementálják.
+UML-jelölés:
+Az objektum-osztályokat téglalapok jelképezik, amelyben a név felül, a tulajdonságokközépen, az
+operációk pedig az alsó részben helyezkednek el.
+Az objektum-osztályok közt alulról (alosztály) felfelé (szuperosztály vagy alosztály) nyilakjelölik az
+általánosítást.
+Az öröklés előnyei:
+Egy absztrakciós mechanizmus, amely entitások osztályozására használható.
+Egy újrafelhasználási mechanizmus, amely a tervezés és programozás szintjén is használható.
+Az öröklési gráf alkalmazási környezetek és rendszerek szerveződéséről szolgáltat információt.
+Az öröklés problémái:
+Az objektum-osztályok nem „önjáróak”. A megértésükhöz szükséges a szuper-osztályuk ismerete is.
+A tervezők gyakran újrahasznosítják az analízis során készített öröklési gráfot. Ez a hatékonyság kárára válhat.
+Az analízis, tervezés és implementáció során használt öröklési gráfok célja más és más, ezeket egymástól
+függetlenül kell kezelni.
+6 . Mit jelent az UML asszociáció? Mondjon példákat l ehetséges asszociációkra.
+Az objektumok és objektum-osztályok más objektumokkal és objektum-osztályokkal lehetnek kapcsolatban.
+A UML-ben az általánosított kapcsolatot az asszociációval jelezzük.
+Az asszociációkon külön szöveges információ írhatja le az asszociáció jellegét. Pl.:
+7, Mik a konkurens objektumok?
+Az objektumok önálló entitások, így alkalmasok párhuzamos implementációra. Az objektumkommunikáció
+üzenet-modelljét közvetlenül lehet implementálni, ha az objektumok egy elosztott
+rendszerben, különböző processzorokon futnak.
+8. Mik a szerverek és az aktív objektumok főbb jellemzői? Az implementáció lehetőségei.
+Szerverek: az objektumot párhuzamos folyamatként (szerver) implementáljuk, ahol az objektum
+operációi belépési pontok lesznek. Ha nincs hívás az objektumra, akkor az felfüggeszti magát és
+várakozik további szolgáltatás-hívásokra.
+Aktív objektumok: az objektumot párhuzamos folyamatként implementáljuk. A belső állapotokat az
+objektum maga is megváltoztathatja, nem kell hozzá külső hívás.
+Implementáció:
+Az aktív objektumok attribútumait operációkkal is megváltoztathatjuk, de autonóm módon, belső
+műveletekkel ezt maguk is megtehetik.
+9. Ismertese az objektum-orientált tervezési folyamat fő elemeit!
+A rendszer kontextusának és felhasználási módozatainak definiálása.
+A rendszer-architektúra tervezése.
+Az alapvető rendszerobjektumok meghatározása.
+A tervezési modellek kidolgozása.
+Az objektum interfészek specifikálása.
+10. Mi a rendszer kontextusa és felhasználási módozatai? Hogyan modellezzük ezeket?
+A fejlesztendő szoftver és külső környezete közti kapcsolatok feltérképezése.
+A rendszer kontextusa: statikus modell, amely leírja a környezetben levő más rendszereket. Alrendszer
+(subsystem) modellek használhatók más rendszerek jelzésére.
+A rendszerhasználat modellje: dinamikus modell, amely a rendszer és környezetének interakcióját
+mutatja be. Use-case modellek használhatók az interakciók leírására.
+Modellek:
+Use-case modellek:
+Use-case modellek használatával a rendszer valamennyi interakciója leírandó. • A use-case modellek a
+rendszer szolgáltatásait ellipszisek segítségével jelölik. Az interakcióban résztvevő entitást pálcikaember
+jelzi.
+11. Mi az architektúra tervezés? Milyen modelleket használhatunk?
+A rendszer és környezete közötti interakciók megértése után ez az információ felhasználható a rendszerarchitektúra
+tervezésére.
+Egy architektúra-modell ne tartalmazzon több, mint 7 entitást.
+12. Ismertesse az objektumok azonosítására használható módszereket!
+A rendszer természetes nyelvi leírásán végzett nyelvi elemzés.
+Az alkalmazási környezetbeli kézzelfogható dolgok alapján.
+Viselkedési megközelítés: mely objektumok mely viselkedésben vesznek részt.
+Szcenárió-alapú analízis: minden szcenárióban azonosítjuk az objektumokat, attribútumokat és a
+metódusokat.
+13. Mi a tervezési modellek feladata? Mit írnak le a statikus és dinamikus modellek?
+Adjon példát lehetséges tervezési modellekre!
+A tervezési modellek az objektumokat, objektum-osztályokat, valamint ezen entitások közötti
+kapcsolatokat írják le.
+Statikus modellek: a rendszer statikus struktúráját írják le objektum-osztályok és relációik segítségével.
+Dinamikus modellek: az objektumok közötti dinamikus interakciókat írják le.
+Pl.:
+Alrendszer (sub-system) modellek: az objektumok koherens alrendszerekre való logikus csoportosítását
+adják.
+Szekvencia-diagramok: az objektumok közötti interakciók sorozatát írják le.
+Állapotgép-modellek: az egyes objektumok hogyan változtatják állapotukat eseményekre reagálva.
+Egyéb modellek: use-case modellek, aggregációs modellek, általánosítási modellek, stb...
+14. Mi az objektum interfészek specifikációjának jelentősége? Milyen módszerek alkalmazhatók
+interfészek definiálására?
+Az objektum interfészek specifikációjának jelentősége: az objektumok és más komponensek
+párhuzamosan fejleszthetők legyenek.
+Módszerek:
+Az UML-ben osztály-diagramot használunk az interfészek specifikálására.
+15. Miért előnyös az OOT a terv evolúciója szempontjából?
+Az objektum-orientált tervezés nagy valószínűséggel leegyszerűsíti a rendszer evolúcióját.
+16. Mik az interfész-tervezés fő emberi tényezői?
+Korlátozott rövidtávú memória: az emberek általában 7 információs egységet tudnak fejben tartani. Ha
+ennél többet ajánlunk fel, akkor nagyobb eséllyel vétenek hibát.
+Időnként hibázunk: amikor emberi hibák miatt rendszerhiba lép fel, a nem megfelelő riasztások és
+hibaüzenetek növelik a stresszt, ami újabb hibákhoz vezethet.
+Különbözőek vagyunk: az emberek egészen különböző képességekkel rendelkeznek. A tervezőnek nem
+szabad a saját képességeiből kiindulnia.
+Különböző interakciókat preferálunk: vannak, akik a képeket, mások a szöveges üzeneteket szeretik.
+17. Mik a felhasználói interfészek fő tervezési elvei?
+A felhasználó ismeretei: az interfész felhasználó-orientált, és ne számítógép-orientált kifejezéseket és
+elveket alkalmazzon.
+Konzisztencia: a rendszer mutasson konzisztens képet. Az utasítások, menük legyenek ugyanolyan
+kinézetűek.
+Minimális meglepetés: ha egy utasítás ismert módon működik, akkor egy hasonló utasítás viselkedése
+megjósolható legyen.
+Helyrehozhatóság: a rendszer legyen a felhasználói hibák ellen valamelyest ellenálló, és adjon
+lehetőséget ezen hibák helyrehozására. Ezek lehetnek „vissza” (undo) jellegű funkciók, destruktív akciók
+előtt jóváhagyás kérése, „lágy” törlések, stb.
+Segítségnyújtás: legyen segítségnyújtási (help) rendszer, on-line kézikönyvek, stb.
+Különböző felhasználók: különféle típusú felhasználók számára is legyenek megfelelő interakciós
+eszközök. Pl. látáskárosultaknak a nagyobb betűméret.
+18. Sorolja fel és jellemezze a felhasználói interakciók fajtáit!
+Interakció típus Előny Hátrány Példa
+Közvetlen
+manipuláció
+Gyors és intuitív
+interakció, könnyű
+megtanulni
+Nehéz implementálni,
+csak akkor
+használható, ha a
+feladathoz és az
+objektumhoz létezik
+megfelelő vizuális
+megjelenítés
+Videó játékok, CAD
+rendszerek
+Menü kiválasztása
+Felhasználói hibák
+elkerülése, kevés
+gépelés kell
+Lassú a gyakorlott
+felhasználók számára,
+ha sok menüpont van,
+akkor komplex lehet
+A legtöbb általános
+célú rendszer
+Kitöltendő form
+Egyszerű adatbevitel,
+könnyű megtanulni,
+ellenőrizhető
+Nagy
+képernyőfelületet
+igényel, problémákat
+okoz, ha a form
+mezői nem
+illeszkednek a
+felhasználó
+szándékához
+Részvény-kezelés,
+személyi kölcsönök
+ügyintézése
+Parancsnyelv Hatékony és flexibilis Nehéz megtanulni,
+gyenge hibakezelés Operációs rendszerek
+Természetes nyelv
+Alkalmi felhasználók
+is tudják kezelni,
+könnyen
+kiterjeszthető
+Sok gépelést igényel,
+a természetes nyelvek
+gépi megértése
+megbízhatatlan
+Információ
+visszakereső
+rendszerek
+19. Ismertesse az információ prezentálás módját Modell-Nézet-Kontroller szervezési elv segítségével!
+A Modell-Nézet-Kontroller megközelítés a többszörös adatprezentáció támogatásának egyik
+lehetséges eszköze.
+20 . Mik az analóg és digitális megjelenítés előnyei, mikor használjuk őket?
+• Digitális prezentáció: kompakt: kis helyet igényel a képernyőn, a pontos értékek kijelezhetők.
+• Analóg prezentáció: könnyebb egy pillantással az értékről benyomást szerezni, relatív értékek is
+mutathatók, könnyebb a kivételes adatok felismerése.
+2 1. Mik a színek használatának fő szabályai a felhasználói interfészekben?
+A színek száma legyen limitált, használatuk visszafogott.
+Színek változása jelentheti a rendszer állapotának változását.
+A végrehajtandó feladat támogatása történhet színkódolással.
+A színkódolás legyen átgondolt és konzisztens.
+A színek párosítása óvatosan történjen.
+2 2. Mik a hibaüzenetek használatának fő szabályai a felhasználói interfészekben?
+A hibaüzenetek tervezése nagyon fontos. Rossz hibaüzenetek hatására a felhasználóelutasíthatja a
+rendszer használatát.
+A hibaüzenet legyen udvarias, tömör, konzisztens és konstruktív.
+A felhasználó háttérismerete legyen a meghatározó tényező az üzenetek tervezésénél.
+2 3. Ismertesse a felhasználói interfészek tervezésének folyamatát, annak 3 fő tevékenységét!
+Iteratív eljárás, a fejlesztők és felhasználók szoros kapcsolatban vannak. A 3 fő tevékenység:
+Felhasználók elemzése: Mit fognak a felhasználók a rendszerrel csinálni?
+Prototípus készítés: prototípusok kidolgozása, kísérletezés céljára.
+Interfész kiértékelés: a prototípusokkal felhasználók bevonásával kísérletek végzése.
+2 4. Mik az interfész tervezés során alkalmazott elemzési technikák?
+Feladat elemzése: a feladat végrehajtásához szükséges lépések modellezése.
+Interjúk és kérdőívek: a felhasználók kikérdezése az általuk végzett munkáról.
+Etnográfia: a felhasználók munka közbeni megfigyelése.
+25 . Mi a felhasználói interfész prototípusok célja, illetve milyen fajtáik vannak? Rövid jellemzésük.
+Cél: a felhasználó közvetlen tapasztalatokat gyűjtsön az interfészről.
+Papír prototípus:
+Szcenáriók végrehajtása vázlatos (skicc) interfészeken.
+A storyboard technikával interakciók sorozata mutatható be.
+Papír prototípusok használatával a felhasználók reakció a javasolt tervvel kapcsolatban hatékonyan
+feltárhatók.
+2 6. Hogyan lehet a felhasználói interfészek használhatóságát értékelni? Mik a főbb használhatósági
+jellemzők?
+Egyszerű értékelési technikák:
+Kérdőívek a felhasználók számára.
+A rendszer használatáról videó-felvétel készítése, majd ennek kiértékelése.
+Kiegészítő kód: a felhasználás módjához és a felhasználói hibákhoz kapcsolódó információk gyűjtése.
+Kiegészítő kód: on-line felhasználói visszajelzések gyűjtése.
+Használhatósági jellemzők:
+Tanulhatóság: Mennyi idő alatt lehet egy új felhasználó produktív a rendszer használatával?
+Működési sebesség: A rendszer válaszideje hogyan illeszkedik a felhasználó munkastílusába?
+Robusztusság: Mennyire toleráns a rendszer a felhasználói hibákkal szemben?
+Visszaállíthatóság: Milyen jól tud a rendszer a felhasználói hibákból talpra állni?
+Adaptálhatóság: Mennyire van a rendszer egy adott munkamodellhez kötve?
+27. Mi a verifikáció és a validáció? Mi a célja?
+Verifikáció: a szoftver teljesítse a specifikációt.
+Validáció: a szoftver azt csinálja, amit a felhasználó tényleg akar.
+Célja: a szoftver iránti bizalmi alapot teremtése: azaz a szoftver elég jó ahhoz, hogy ellássa feladatát.
+28. Mi a statikus és dinamikus verifikációs módszerek, mi köztük a különbség. Mikor
+alkalmazhatók statikus, mikor dinamikus módszerek?
+Statikus verifikáció: szoftver vizsgálatok: problémák feltárása a rendszer statikus reprezentációjának
+analízise segítségével. Kiegészíthető eszköz-alapú dokumentum- és kódanalízissel.
+Dinamikus verifikáció: szoftver tesztelés: kísérletezés és a termék viselkedésének megfigyelése. A
+rendszert teszt-adatokkal futtatva működés közben figyeljük a viselkedését.
+29. Mik a tesztelés típusai, mik ezek fő jellemzői?
+Hibatesztelés: a tesztek rendszerhibák feltárására.
+Validációs tesztelés: célja: annak bizonyítása, hogy a szoftver teljesíti a követelményeket.
+30 . Ismertesse a V & V tervezésének elveit, valamint a fejlesztés V-modelljét!
+V & V tervezési elvek:
+Körültekintő tervezésre van szükség.
+A tervezést már a fejlesztés korai fázisában el kell kezdeni.
+A terv határozza meg a statikus verifikálás és a tesztelés helyes egyensúlyát.
+A teszt tervezése a tesztelési eljárás irányelveit fogalmazza meg, nem kell a termék tesztelését itt leírni.
+A fejlesztés V-modellje:
+31 . Ismertesse a szoftvertesztelési terv struktúráját!
+A tesztelő eljárás, Követelmények követhetősége, Tesztelt elemek, A tesztelés menetrendje, A
+tesztek rögzítésének eljárása, Hardver és szoftver szükségletek, Kényszerek.
+32 . Mik a szoftver vizsgálatok főbb jellemzői? Ismertesse a vizsgálat folyamatát!
+Jellemzők:
+Emberek vizsgálják a forrás valamilyen reprezentációját anomáliák és hibák után kutatva.
+A vizsgálathoz nem kell a rendszert futtatni, így implementáció előtt is megtehető.
+A rendszer bármely reprezentációja vizsgálható: követelmények, terv, teszt adatok, stb. Folyamata:
+33 . Hogyan viszonyul egymáshoz a szoftver-vizsgálat és -tesztelés?
+A vizsgálatok és a tesztelés egymást kiegészítő verifikációs technikák.
+A V & V eljárás alatt mindkettő használata ajánlatos.
+A vizsgálat ellenőrzi, hogy a specifikációnak megfelel-e, de azt nem, hogy a valós felhasználói
+igényeket kielégíti-e.
+A vizsgálatok nem tudják ellenőrizni a nem-funkcionális jellemzőket, pl. teljesítmény,
+használhatóság, stb.
+34. Milyen főbb szerepek fordulnak elő a szoftver-vizsgálat során?
+Szerző vagy tulajdonos, Vizsgáló, Felolvasó, Írnok, Elnök vagy moderátor, Fő moderátor.
+35. Mik az ellenőrző listák, hogyan alkalmazzuk a szoftver-vizsgálat során? Soroljon fel tipikus
+pontokat az ellenőrző listán!
+A gyakori hibákat tartalmazó ellenőrző lista használandó a vizsgálat levezetésére.
+A hiba-ellenőrző listák programnyelv-specifikusak és az adott programnyelv karakterisztikus hibáit
+tartalmazzák.
+Ellenőrző lista pontjai:
+Adathibák, Vezérlési hibák, I/O hibák, Interfész hibák, Tárolás-menedzsment hibák, Kivételkezelési hibák.
+36 . Hogyan működik az automatikus statikus analízis? Mire használható?
+A statikus analizátorok a forrás kódok feldolgozására szolgáló szoftver eszközök. A program
+szövegének elemzésével potenciális hibalehetőségek felfedezésére szolgálnak, amelyeket a V & V
+csoporttal tudatnak.
+Lépései: vezérlés analízis, adathasználat analízis, interfész analízis, információ-folyam analízis,
+útvonal analízis.
+37. Mikor és hogyan alkalmazhatók a verifikáció során a formális módszerek? Mik az előnyei és
+hátrányai?
+Formális módszerek alkalmazhatók, ha a rendszer matematikai modellje adott.
+Előnyei:
+A matematikai specifikáció elkészítéséhez a követelmények részletes elemzése szükséges, ami
+valószínűleg felfedi a hibákat.
+Implementációs hibákat még a tesztelés előtt fel tud fedni a program és a specifikáció együttes
+vizsgálatával.
+Hátrányai:
+Speciális jelölésrendszer használata szükséges, amelyet az alkalmazási környezet szakértői nem
+értenek.
+A specifikáció kidolgozása nagyon drága. Még drágább bizonyítani, hogy a program megfelel a
+specifikációnak.
+Más V & V módszerek alkalmazásával is el lehet jutni ugyanolyan bizalmi szintre.
+38 . Ismertesse a Cleanroom szoftverfejlesztési eljárást!
+A név a félvezető-gyártásban használt 'Cleanroom’ eljárásból ered.
+Filozófia: a hibák elkerülése, nem a hibák eltávolítása.
+Elemei: inkrementális fejlesztés, statikus verifikáció és a statisztikus tesztelés.
+Résztvevő csoportok: Specifikációs csoport, Fejlesztési csoport, Tanúsító csoport.
+39 . Mi a szoftverfejlesztés során alkalmazott tesztelési eljárások 2 fő típusa (fázisa)? Ismertesse
+ezeket röviden!
+Komponenstesztelés: programkomponensek egyedi tesztelése, általában a komponens fejlesztőjének
+feladata, a tesztek a fejlesztő tapasztalatán alapulnak.
+Rendszertesztelés: komponensek rendszerbe vagy alrendszerbe integrált csoportjainak tesztelése,
+egy független fejlesztő csoport feladata, a tesztek a rendszerspecifikáción alapulnak.
+40. Mi a hibatesztelés és a validációs tesztelés célja?
+Hibatesztelés célja: a rendszerben hibák keresése.
+Validációs tesztelés célja: a fejlesztők és megrendelő számára annak demonstrálása, hogy a szoftver
+teljesíti a követelményeket.
+41. Ismertesse a szoftvertesztelés folyamatát!
+42. Ismertesse a tesztelés főbb vezérelveit!
+A menükön keresztül elérhető valamennyi funkciót le kell tesztelni.
+Az azonos menün keresztül elérhető funkciók kombinációit tesztelni kell.
+Ahol felhasználói bevitel van, minden funkciót ellenőrizni kell helyes és helytelen adatokkal.
+43 . Ismertesse a rendszertesztelés célját és főbb tulajdonságait!
+Célja: a komponensek rendszerbe vagy alrendszerbe integrálásával foglalkozik.
+Fázisai:
+Integrációs teszt: tesztelők használhatják a rendszer forráskódját. A rendszer a komponensek
+integrálása folyamán teszteljük.
+Végteszt: a tesztelők az átadandó teljes rendszert fekete dobozként tesztelik.
+44 . Ismertesse az integrációs tesztelés célját, megvalósíthatóságának 2 fő lehetőségét, valamint az
+inkrementális tesztelés menetét!
+Integrációs tesztelés célja: a rendszer komponensekből áll, a tesztelés a komponensek
+interakciójából eredő problémákkal foglalkozik.
+Típusai:
+Felülről lefelé (top-down) integrálás: a rendszer vázának felépítése, majd akomponensek beépítése.
+Alulról felfelé (bottom-up) integrálás: az infrastruktúra komponensek integrálása, majd afunkcionális
+komponensek hozzáadása. Inkrementális tesztelés menete: ?
+45 . Mi a végteszt célja, menete és főbb tulajdonságai?
+Célja: a gyártó bizalmi szintjének növelése abban, hogy a rendszer megfelel a követelményeknek.
+A végteszt általában fekete doboz teszt:
+• csak a specifikáción alapul, a tesztelők nem ismerik a rendszer implementációját. Lásd: 155. kérdés
+ábrája.
+46. Mit jelent a fekete doboz tesztelés?
+Csak a specifikáción alapul, a tesztelők nem ismerik a rendszer implementációját.
+47. Hogyan lehet a rendszer teljesítményét tesztelni? Ismertesse a stressz-tesztelésmenetét! Mikor
+alkalmazzuk?
+A teljesítmény tesztelése általában egy teszt-sorozattal történik, ahol a terhelést fokozatosan
+növeljük, amíg a rendszer teljesítménye már elfogadhatatlanná válik.
+Stressz-tesztelés:
+A rendszert a tervezett értéknél jobban terheljük.
+A rendszer stresszelése gyakran fed fel hibákat.
+A stresszelés a hibás működés közbeni viselkedését is teszteli.
+A rendszernek nem szabad katasztrofálisan összeomlania.
+Teszteli az elfogadhatatlan szolgáltatás-kiesést vagy adatvesztést.
+Alkalmazása: különösen fontos elosztott rendszereknél, ahol a rendszer súlyosan degradálódhat, ha a
+hálózat túlterhelődik.
+48 . Mi a komponens tesztelés, főbb fajtái?
+Komponens tesztelés: az egyes komponensek izolált tesztelésének folyamata.
+Hibatesztelő folyamat.
+Komponensek lehetnek:
+Egyedi függvények vagy objektumok metódusai.
+Objektum osztályok sok attribútummal és metódussal.
+Kompozit komponensek, amelyek szolgáltatásait interfészeken keresztül lehet elérni.
+49 . Mi az interfész-tesztelés szerepe és felhasználásának módja? Mik a tipikus interfész-hibák?
+Szerepe: az interfészek hibáinak, vagy az interfészekről alkotott hibás feltételezésekből eredő hibák
+felderítése.
+Felhasználásának módja: az objektumokat interfészeikkel definiáljuk.
+Tipikus interfész-hibák:
+Hibás interfész használat: a hívó komponens egy másik komponenst akar használni, derosszul
+használja annak interfészét.
+Interfész félreértelmezés: a hívó komponens a hívott komponens viselkedéséről tévesfeltételezésekkel él.
+Időzítési hibák: a hívó és hívott komponensek más sebességgel működnek és ígyelőfordulhat elavult
+adatok használata.
+50. Mit jelent a követelmény alapú tesztelés?
+Egyik alapelve, hogy a követelmények tesztelhetők legyenek.
+Egy validációs tesztelési technika, ahol minden egyes követelményhez kidolgozunk az ellenőrző
+teszteket.
+51. Ismertesse a partíciós tesztelés menetét!
+A ki- és bemeneti adatok gyakran különböző osztályokba sorolhatók, ahol az osztályon belüli elemek
+„hasonlóak”.
+Ezen osztályok mindegyike egy ekvivalencia partíció, ahol a program ekvivalens módon viselkedik
+az osztály minden elemére.
+Teszt esetek minden partícióból választandók.
+52 . Mit jelent a strukturális, vagy „fehér doboz” tesztelés?
+Teszt esetek a program struktúrája alapján.
+A program ismerete alapján újabb teszt esetek azonosítása.
+Cél: valamennyi utasítás (de nem minden végrehajtási út kombináció) végrehajtása.
+53 . Ismertesse egy automatikus tesztelést támogató munkapad főbb elemeit!
+</body>
+</html>
